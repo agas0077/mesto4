@@ -1,0 +1,97 @@
+  <!DOCTYPE html>
+  <html lang="ru">
+  <head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mesto</title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+    <div class="root">
+      <header class="header root__section">
+        <img src="<%=require('./images/logo.svg')%>" alt="mesto logo" class="logo">
+      </header>
+      <div class="profile root__section">
+        <div class="user-info">
+          <div class="user-info__photo">
+            <div class='background-dimmer background-dimmer__user-photo'></div>
+          </div>
+          <div class="user-info__data">
+            <h1 class="user-info__name"></h1>
+            <p class="user-info__job"></p>
+            <button class='button button_edit-button'>Edit</button>
+          </div>
+          <button class="button button_user-info">+</button>
+        </div>
+      </div>
+
+      <div class="places-list root__section">
+      </div>
+
+      <div class="popup" id='add-form'>
+        <div class="popup__content">
+          <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+          <h3 class="popup__title">Новое место</h3>
+          <form novalidate class="popup__form" name="new">
+            <input required minlength="2" maxlength="30" type="text" id='name' name="name" class="popup__input popup__input_valid" placeholder="Название">
+            <span style='display: none' id='error-name' class='error-message'></span>
+            <input required minlength="2" type="url" id='link' name="link" class="popup__input popup__input_valid" placeholder="Ссылка на картинку">
+            <span style='display: none' id="error-link" class='error-message'></span>
+            <button disabled type='submit' id='submit' class="button button_addSave">+</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="popup" id='profile-form'>
+        <div class="popup__content">
+          <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+          <h3 class="popup__title">Редактированть профиль</h3>
+          <form novalidate class="popup__form" name="profile">
+            <input required minlength="2" maxlength="30" type="text" id='authorName' name="authorName" class="popup__input popup__input_valid" placeholder="Имя">
+            <span style='display: none' id='error-authorName' class='error-message'></span>
+            <input required minlength="2" maxlength="30" type="text" id='about' name="about" class="popup__input popup__input_valid" placeholder="О себе">
+            <span style='display: none' id='error-about' class='error-message'></span>
+            <button disabled type='submit' id='submit' class="button button_profileSave">Сохранить</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="popup" id='avatar-form'>
+        <div class="popup__content">
+          <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+          <h3 class="popup__title">Обновить аватар</h3>
+          <form novalidate class="popup__form" name="avatar">
+            <input required minlength="2" type="url" id='avatarLink' name="avatarLink" class="popup__input popup__input_valid" placeholder="Ссылка на аватар">
+            <span style='display: none' id="error-avatarLink" class='error-message'></span>
+            <button disabled type='submit' id='submit' class="button button_avatarSave">Сохранить</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Образец попапа большой картинки-->
+      <div style="display: none" class="picture-popup" id='bigPicture'>
+        <div class='picture-popup-content'>
+            <img class='picture-popup-content__image'>
+            <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+        </div>
+      </div>
+
+      <!-- Образец затемнителя -->
+      <div style="display: none" class="background-dimmer background-dimmer__page"></div>
+
+    </div>
+
+    <!-- Классы -->
+    <!-- <script src='src/Card.js'></script>
+    <script src='src/CardList.js'></script>
+    <script src='src/Popup.js'></script>
+    <script src='src/UserInfo.js'></script>
+    <script src='src/FormValidator.js'></script>
+    <script src='src/BigPicPopup.js'></script>
+    <script src='src/Api.js'></script> -->
+    <!-- Основной скрипт -->
+    <script src='<%= htmlWebpackPlugin.files.chunks.main.entry %>'></script>
+
+  </body>
+  </html>

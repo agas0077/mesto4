@@ -1,0 +1,22 @@
+@import url(./_edit-button/button_edit-button.css);
+@import url(./_user-info/button_user-info.css);
+@import url(./_addSave/button_addSave.css);
+@import url(./_profileSave/button_profileSave.css);
+@import url(./_avatarSave/button_avatarSave.css);
+@import url(./_addSaveWhileUploading/button_addSaveWhileUploading.css);
+
+.button {
+  background-color: black;
+  color: white;
+  display: block;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline-color: greenyellow;
+}
+ 
+.button:disabled {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.2);
+}

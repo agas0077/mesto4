@@ -1,0 +1,15 @@
+.button_edit-button {
+    border: solid white 1px;
+    box-sizing: border-box;
+    width: 38px;
+    height: 18px;   
+    margin-top: 24px;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button_edit-button:focus {
+    outline-color: greenyellow;
+  }
