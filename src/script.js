@@ -46,15 +46,16 @@ import UserInfo from './UserInfo';
     const avatarPopupCloseBtn = avatarPopup.querySelector('.popup__close');
     const avatarPopupSubmitBtn = avatarPopup.querySelector('.button_avatarSave');
 
+// Определение вида сборки
+const isDev = process.env.NODE_ENV === 'development';
+
 // Классы
-const api = new Api('https://praktikum.tk/cohort8', '366ae70b-266a-41f4-b874-e57697e718a8');
+const api = new Api((isDev ? 'http://praktikum.tk/cohort8' : 'https://praktikum.tk/cohort8'), '366ae70b-266a-41f4-b874-e57697e718a8');
 const card = new Card();
 const popup = new Popup(addPopup, profilePopup, avatarPopup);
 const userInfo = new UserInfo(api, userName, userAbout);
 const elements = new FormValidator(fieldsForValidation);
 const cardList = new CardList(placesList);
-
-
 
 // Запуск функций сайта
 
