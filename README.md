@@ -1,10 +1,15 @@
-# agas0077.mesto.github.io
-### Agasyants Andrey
+# mesto4
+Hi, my name is Andrey and this is my first project on GH.
 
-*actual version of the proejct v1.0.0*
+### Version 
+The current version is __0.3.23__
 
-The project is initiated for practicing skills of using Git and GitHub, along with Webpack and its features.
+### Techs
+In this project I used such technologies as HTML, CSS, JS, Webpack
 
-The follwing technologies were used in this project: HTML, CSS, JS, Git, Webpack.
+### Current state
+For now the project is avaliable at the link bellow. The code will become avalible at the master branch as soon as I get aproval from the yandex reviewer team.
 
-Follow the [link](https://agas0077.github.io/mesto4/) to check out the project.
+### Link 
+The project can be opend from [here](https://agas0077.github.io/mesto4/ "Mesto").
+>>>>>>> master
