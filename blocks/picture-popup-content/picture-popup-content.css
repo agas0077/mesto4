@@ -1,8 +1,0 @@
-@import url(__image/picture-popup-content__image.css);
-
-.picture-popup-content {
-    position: relative;
-    max-width: 80vw;
-    max-height: 80vh;
-    
-}
