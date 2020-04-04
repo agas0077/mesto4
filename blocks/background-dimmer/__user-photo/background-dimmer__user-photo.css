@@ -1,0 +1,10 @@
+.background-dimmer__user-photo {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.background-dimmer__user-photo:hover {
+    opacity: .5;
+}
