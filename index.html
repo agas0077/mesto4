@@ -1,13 +1,13 @@
   <!DOCTYPE html>
   <html lang="ru">
-  <head> 
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mesto</title>
   </head>
   <body>
-    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
     <div class="root">
       <header class="header root__section">
         <img src="<%=require('./images/logo.svg')%>" alt="mesto logo" class="logo">
@@ -81,17 +81,8 @@
       <div style="display: none" class="background-dimmer background-dimmer__page"></div>
 
     </div>
-
-    <!-- Классы -->
-    <!-- <script src='src/Card.js'></script>
-    <script src='src/CardList.js'></script>
-    <script src='src/Popup.js'></script>
-    <script src='src/UserInfo.js'></script>
-    <script src='src/FormValidator.js'></script>
-    <script src='src/BigPicPopup.js'></script>
-    <script src='src/Api.js'></script> -->
     <!-- Основной скрипт -->
-    <script src='<%= htmlWebpackPlugin.files.chunks.main.entry %>'></script>
+    <script src='<%= htmlWebpackPlugin.files.js %>'></script>
 
   </body>
   </html>
